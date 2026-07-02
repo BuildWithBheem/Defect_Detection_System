@@ -1,0 +1,23 @@
+# Virtual Environments
+main_venv/
+grad_cam_venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model checkpoints (optional)
+*.h5
+
+# Logs
+*.log
+
+casting_data/
