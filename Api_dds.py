@@ -28,13 +28,15 @@ def Prediction(image_predict: UploadFile = File(...)):
     img = Image_Analyse(image_predict)
     predict = cnn.predict(img)
     output = -1
-    predict = 100 * predict[0][0]
-    if predict > 55:                   # Threshold value : 55 %
+    confidence = 100 * predict[0][0]
+    if confidence > 55:                   # Threshold value : 55 %
         output = "Non-Defective"
-    elif predict < 55:
+    elif confidence < 55:
         output = "Defective"
+        confidence = 100 - confidence
+    
     return {"Prediction": output, 
-            "Confidence (%)": round(float(predict),4)}
+            "Confidence (%)": round(float(confidence),4)}
 
 @app.post("/generate")
 
