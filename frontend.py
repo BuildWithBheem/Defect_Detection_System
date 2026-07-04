@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 import io
 
-FASTAPI_URL = "http://127.0.0.1:8000"
+FASTAPI_URL = "https://defect-detection-system-gbea.onrender.com"
 
 st.set_page_config(
     page_title="Defect Detection System",
