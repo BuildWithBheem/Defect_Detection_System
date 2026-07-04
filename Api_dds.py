@@ -4,7 +4,7 @@ import tensorflow as tf
 from PIL import Image
 import numpy as np
 from Grad_cam import generate_gradcam
-cnn = tf.keras.models.load_model("Defect_detection_system.keras")
+cnn = tf.keras.models.load_model(r"Defect_detection_system.keras")
 app = FastAPI()
 
 def Image_Analyse(upload: UploadFile = File(...)):      # Helper function
